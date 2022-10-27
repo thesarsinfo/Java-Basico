@@ -1,4 +1,4 @@
-package src.univesp.exercicio;
+package univesp.exercicio;
 
 public class Bola
 {
@@ -13,12 +13,28 @@ public class Bola
     public int getTamanho() {return this.tamanho;}
     public void setTamanho(int tamanho) { this.tamanho = tamanho;}
     public boolean getCheia() {return this.cheia;}   
-    public void setCheia(Boolean cheia) { this.cheia = cheia;}    
+    public void setCheia(Boolean cheia) { this.cheia = cheia;}        
  
 
-    public Bola(){}
-    public Bola(String material, String cor, int tamanho, boolean cheia){}
-    public Bola(String cor, int tamanho){}
+    public Bola()
+    {
+        this.material = "";
+        this.cor = "";
+        this.tamanho = 0;
+        this.cheia = false;
+    }
+    public Bola(String material, String cor, int tamanho, boolean cheia)
+    {
+        this.material = material;
+        this.cor = cor;
+        this.tamanho = tamanho;
+        this.cheia = cheia;
+    }
+    public Bola(String cor, int tamanho)
+    {        
+        this.cor = cor;
+        this.tamanho = tamanho;        
+    }
 
     public void pintar(String cor)
     {
